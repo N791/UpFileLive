@@ -11,12 +11,12 @@ pip install UpFileLive
 ```
 
 ### 依赖库
-- [playwright](https://playwright.dev/python/)
+- [playwright](https://playwright.dev/python/), loguru
 - Python 版本 >= 3.7
 
 通过以下命令安装依赖库：
 ```bash
-pip install playwright
+pip install playwright loguru
 python -m playwright install
 ```
 

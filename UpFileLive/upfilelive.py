@@ -1,3 +1,5 @@
+import os
+from loguru import logger
 from playwright.async_api import async_playwright
 from playwright.sync_api import sync_playwright
 
@@ -7,6 +9,8 @@ class UpFileLive:
         self.file_path = file_path  # 文件路径
         self.share_link = ''        # 分享链接
         self.download_link = ''     # 下载链接
+        
+        self.check_file()       # 文件检查
 
     def get_share_link(self):
         """ 获取分享链接 """
@@ -15,6 +19,22 @@ class UpFileLive:
     def get_download_link(self):
         """ 获取下载链接 """
         return self.download_link
+    
+    def check_file(self):
+        """ 检查文件是否存在和文件大小是否超过 500MB """
+        try:
+            if os.path.exists(self.file_path) == False:\
+                raise Exception("File does not exist")
+        except Exception as e:
+            logger.info(f"Error: {e}")
+            
+        file_size = os.path.getsize(self.file_path) / (1024 * 1024)
+        try:
+            if file_size > 500:
+                raise Exception("File size exceeds 500MB")
+        except Exception as e:
+            logger.info(f"Error: {e}")
+            
 
     def sync_upfile(self):
         """ 

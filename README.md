@@ -16,12 +16,12 @@ pip install UpFileLive
 This library requires:
 
 - Python 3.7 or later
-- [playwright](https://playwright.dev/python/)
+- [playwright](https://playwright.dev/python/), loguru
 
 Install Playwright and dependencies:
 
 ```bash
-pip install playwright
+pip install playwright loguru
 python -m playwright install
 ```
 
