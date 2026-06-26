@@ -17,7 +17,7 @@ pip install UpFileLive
 通过以下命令安装依赖库：
 ```bash
 pip install playwright httpx loguru
-python -m playwright install
+python -m playwright install # 使用httpx版本可以不用执行
 ```
 
 ## 使用方法

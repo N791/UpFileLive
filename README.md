@@ -22,7 +22,7 @@ Install Playwright and dependencies:
 
 ```bash
 pip install playwright httpx loguru
-python -m playwright install
+python -m playwright install # With the HTTPX version, you don't need to execute this command
 ```
 
 ## Usage
