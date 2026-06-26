@@ -16,12 +16,12 @@ pip install UpFileLive
 This library requires:
 
 - Python 3.7 or later
-- [playwright](https://playwright.dev/python/), loguru
+- [playwright](https://playwright.dev/python/), [httpx](https://www.python-httpx.org), loguru
 
 Install Playwright and dependencies:
 
 ```bash
-pip install playwright loguru
+pip install playwright httpx loguru
 python -m playwright install
 ```
 
@@ -31,6 +31,7 @@ python -m playwright install
 
 ```python
 From UpFileLive import UpFileLive
+# from UpFileLive import UpFileLiveHttpx as UpFileLive (HTTPX method, but stability is not guaranteed)
 
 # Initialize the UpFileLive object
 file_uploader = UpFileLive("/path/to/your/file")

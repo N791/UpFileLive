@@ -11,12 +11,12 @@ pip install UpFileLive
 ```
 
 ### 依赖库
-- [playwright](https://playwright.dev/python/), loguru
+- [playwright](https://playwright.dev/python/), [httpx](https://www.python-httpx.org), loguru
 - Python 版本 >= 3.7
 
 通过以下命令安装依赖库：
 ```bash
-pip install playwright loguru
+pip install playwright httpx loguru
 python -m playwright install
 ```
 
@@ -25,6 +25,7 @@ python -m playwright install
 ### 初始化类
 ```python
 from UpFileLive import UpFileLive
+# from UpFileLive import UpFileLiveHttpx as UpFileLive (httpx 方式，不确保稳定)
 
 # 初始化 UpFileLive 对象
 file_uploader = UpFileLive("/path/to/your/file")
